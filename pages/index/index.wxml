@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<!--<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>-->
+<view class="container home-container">
+  <view class="logo-search-box">
+    <view class="logo-box">
+      <image src="../../imgs/logo.png"></image>
+    </view>
+    <view class="search-box">
+      <icon type="search" size="16" color="{{item}}"/>
+      <input id="search-input"  maxlength="10" placeholder="搜素商品，共2012件好物" />
+    </view>
+  </view>
+  <scroll-view scroll-x="true" class="nav-box">
+    <block wx:for="{{navArr}}">
+      <!--<text wx:if="{{item=='推荐'}}" class="nav-item selected" bindtap="selecteClass" data-title-name="{{item}}">{{item}}</text>-->
+      <!--<text class="nav-item" bindtap="selecteClass" data-title-name="{{item}}">{{item}}</text>-->
+      <text class="nav-item" class ="{{selected:1==1}}" bindtap="selecteClass" data-title-name="{{item}}">{{item}}</text>
+    </block>
+  </scroll-view>
+</view>

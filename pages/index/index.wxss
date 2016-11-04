@@ -1,0 +1,69 @@
+/**index.wxss**/
+.home-container{
+  overflow-x: hidden;
+}
+.logo-search-box{
+  height: 28px;
+  position: relative;
+  padding: 0 10px;
+}
+.logo-box{
+  position: absolute;
+  left:10px;
+  top:0;
+  height: 100%;
+  width: 100px;
+}
+
+.logo-box image{
+  width:88px;
+  height: 28px;
+}
+.search-box{
+  margin-left: 100px;
+  padding-left: 10px;
+  position: relative;
+  background-color: #ededed;
+  border-radius: 3px;
+  height: 100%;
+}
+.search-box icon{
+  position: absolute;
+  top:8px;
+  display: inline-block;
+  width: 25px;
+}
+#search-input{
+  display: block;
+  margin-left: 20px;
+  font-size: 13px;
+  height: 100%;
+}
+
+.nav-box{
+  padding: 8px;
+  margin: 5px;
+  white-space: nowrap;
+
+}
+.nav-box .nav-item{
+  font-size: 14px;
+  padding: 0px 10px;
+  position: relative;
+  margin-right:15px; 
+  height: 23px;
+  display: inline-block;
+  text-align: center;
+}
+.nav-box .nav-item.selected{
+  color: #B52F30;
+}
+.nav-box .nav-item.selected::after{
+  content:'';
+  width: 100%;
+  height: 3px;
+  position:absolute;
+  bottom:0;
+  left:0;
+  border-bottom: 2px solid #B52F30;
+}

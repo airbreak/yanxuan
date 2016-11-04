@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/major/major",
+    "pages/class/class",
+    "pages/buycar/buycar",
+    "pages/myselft/myselft"
+  ],
+  "window":{
+    "navigationBarTitleText": "Demo",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar":{
+    "list":[{
+        "pagePath":"pages/index/index",
+        "iconPath":"imgs/home.jpg",
+        "selectedIconPath":"imgs/home.jpg",
+        "text":"首页"
+      },{
+        "pagePath":"pages/major/major",
+        "iconPath":"imgs/major.jpg",
+        "selectedIconPath":"imgs/major.jpg",
+        "text":"专题"
+      },{
+        "pagePath":"pages/class/class",
+        "iconPath":"imgs/class.jpg",
+        "selectedIconPath":"imgs/class.jpg",
+        "text":"分类"
+      },{
+        "pagePath":"pages/buycar/buycar",
+        "iconPath":"imgs/buycar.png",
+        "selectedIconPath":"imgs/buycar.png",
+        "text":"购物车"
+      },{
+        "pagePath":"pages/myselft/myselft",
+        "iconPath":"imgs/myselft.jpg",
+        "selectedIconPath":"imgs/myselft.jpg",
+        "text":"个人"
+      }],
+      "color":"#888",
+      "backgroundColor": "#fff",
+      "selectedColor": "#A53A39"
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "debug":true
+}
