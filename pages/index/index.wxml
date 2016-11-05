@@ -1,13 +1,3 @@
-<!--index.wxml-->
-<!--<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>-->
 <view class="container home-container">
   <view class="logo-search-box">
     <view class="logo-box">
@@ -20,9 +10,12 @@
   </view>
   <scroll-view scroll-x="true" class="nav-box">
     <block wx:for="{{navArr}}">
-      <!--<text wx:if="{{item=='推荐'}}" class="nav-item selected" bindtap="selecteClass" data-title-name="{{item}}">{{item}}</text>-->
-      <!--<text class="nav-item" bindtap="selecteClass" data-title-name="{{item}}">{{item}}</text>-->
-      <text class="nav-item" class ="{{selected:1==1}}" bindtap="selecteClass" data-title-name="{{item}}">{{item}}</text>
+      <text class="nav-item {{classArr[item.title==currentItem?0:1]}}" data-index="{{$index}}" bindtap="selecteClass" data-title-name="{{item.title}}">{{item.title}}</text>
     </block>
   </scroll-view>
+  <view class="view-box">
+    <block wx:for="{{navArr}}">
+      <view class="view-item-box {{viewClassArr[item.title==currentItem?0:1]}}" style="background-color:{{colorsArr[item.index]}}"></view>
+    </block>
+  </view>
 </view>

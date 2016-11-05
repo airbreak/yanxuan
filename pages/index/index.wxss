@@ -67,3 +67,19 @@
   left:0;
   border-bottom: 2px solid #B52F30;
 }
+
+
+.view-box{
+  position: absolute;
+  top:70px;
+  bottom:0;
+  width: 100%;
+}
+.view-item-box{
+  height: 100%;
+  width:100%; 
+  display: none;
+}
+.view-item-box.show{
+  display: block;
+}
