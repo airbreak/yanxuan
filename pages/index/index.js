@@ -32,7 +32,12 @@ Page({
     classArr:classArr,
     currentItem:'推荐',
     colorsArr:['#6F5499','#1E69AD','#59AF50','#563D7C',
-    '#CF4646','#3998DB','#51A67B','#EFD65B','#653A54','#5BB69A']
+    '#CF4646','#3998DB','#51A67B','#EFD65B','#653A54','#5BB69A'],
+    imgArr:[
+      'http://yanxuan.nosdn.127.net/7009d5548e9b474f8e8bd298fb1f6165.jpg?imageView&quality=85&thumbnail=750x400',
+      'http://yanxuan.nosdn.127.net/a92bf91b3f4ae8e2c413fab0b95663e8.jpg?imageView&quality=85&thumbnail=750x400',
+      'http://yanxuan.nosdn.127.net/2c0982973bf8d945a2b61d2e22c39165.jpg?imageView&quality=85&thumbnail=750x400'
+    ]
   },
   //事件处理函数
   bindViewTap: function() {

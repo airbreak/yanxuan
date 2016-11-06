@@ -1,4 +1,6 @@
 /**index.wxss**/
+
+/*logo和搜索*/
 .home-container{
   overflow-x: hidden;
 }
@@ -40,6 +42,8 @@
   height: 100%;
 }
 
+/*导航*/
+
 .nav-box{
   padding: 8px;
   margin: 5px;
@@ -68,7 +72,7 @@
   border-bottom: 2px solid #B52F30;
 }
 
-
+/*导航对应的页面*/
 .view-box{
   position: absolute;
   top:70px;
@@ -82,4 +86,49 @@
 }
 .view-item-box.show{
   display: block;
+}
+
+/*推荐页面*/
+.view-item-box.recomend swiper{
+  height: 170px;
+  width: 100%;
+}
+.view-item-box.recomend swiper image{
+  width:100%;
+}
+
+/*严选承诺*/
+.yanxuan-promise{
+  height: 30px;
+  flex-direction: row;
+  display: flex;
+  border-bottom: 1px solid #D9D9D9;
+  font-size: 16px;
+  padding: 10px 0;
+}
+.left-promise{
+  height: 30px;
+  width: 100px;
+  color: #161212;
+  text-align: center;
+  line-height: 30px;
+  border-right:1px solid #D9D9D9;
+}
+
+.right-promise{
+  flex-direction: row;
+  display: flex;
+  height: 100%;
+  line-height: 30px;
+  margin-left:15px;
+}
+.flex-item{
+  color: #747474;
+}
+.flex-item::after{
+  content: '/';
+  padding: 0 4px;
+}
+.flex-item:last-child::after{
+    content: '';
 }

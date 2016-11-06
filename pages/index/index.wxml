@@ -14,8 +14,51 @@
     </block>
   </scroll-view>
   <view class="view-box">
-    <block wx:for="{{navArr}}">
-      <view class="view-item-box {{viewClassArr[item.title==currentItem?0:1]}}" style="background-color:{{colorsArr[item.index]}}"></view>
-    </block>
+
+      <!--推荐 start-->
+      <view class="view-item-box {{viewClassArr['推荐'==currentItem?0:1]}} recomend">
+        <swiper indicator-dots="true" 
+        autoplay="true" interval="3000">
+          <block wx:for="{{imgArr}}">
+              <swiper-item>
+                <image src="{{item}}" class="slide-image" width="355" height="160"/>
+              </swiper-item>
+          </block>
+        </swiper>
+        <view class="yanxuan-promise">
+         <view class="left-promise">严选承诺</view>
+          <view class="right-promise">
+            <view class="flex-item">网易自营</view>
+            <view class="flex-item">30天退货</view>
+            <view class="flex-item">48小时退款</view>
+          </view>
+        </view>
+
+        <!--商品列表-->
+        <view class="goods-box">
+          <view class="goods-item goods-brand">
+            <view class="good-item-head"><text>品牌制造商直供</text></view>
+            <view class="good-item-body">
+              <view class="goods-brand-left">
+                <view></view>
+                <view></view>
+              </view>
+              <view class="goods-brand-right"></view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+      <!--推荐 end-->
+
+      <view class="view-item-box {{viewClassArr[navArr[1].title==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[navArr[2].title==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[navArr[3].title==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[navArr[4].title==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[navArr[5].title==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[navArr[6].title==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[navArr[7].title==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[navArr[8].title==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[navArr[9].title==currentItem?0:1]}}"></view>
   </view>
 </view>
