@@ -4,8 +4,21 @@
   "navigationBarTitleText": "首页",
   "backgroundColor": "#000",
   "backgroundTextStyle": "light",
-  "goods":[{
-    "goods-brand":[
+  "banners":[
+    {"id":1,
+      "url":"http://yanxuan.nosdn.127.net/7009d5548e9b474f8e8bd298fb1f6165.jpg?imageView&quality=85&thumbnail=750x400",
+      "link":""
+      },
+    {"id":2,
+      "url":"http://yanxuan.nosdn.127.net/a92bf91b3f4ae8e2c413fab0b95663e8.jpg?imageView&quality=85&thumbnail=750x400",
+      "link":""},
+    {"id":3,
+      "url":"http://yanxuan.nosdn.127.net/2c0982973bf8d945a2b61d2e22c39165.jpg?imageView&quality=85&thumbnail=750x400",
+      "link":""
+      }
+  ],
+  "goods":{
+    "goodsBrand":[
       {"title":"MUJI制作商",
       "priceDesc":"14.9元起",
       "img":"http://yanxuan.nosdn.127.net/8281db53767ce4beef0cbe2e8bfd98a8.jpg"
@@ -20,6 +33,4 @@
       }
     ]
   }
-  ]
-  
 }

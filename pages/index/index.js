@@ -12,6 +12,21 @@ Home.prototype={
         return i;
       }
     }
+  },
+  getJsonData:function(callback){
+    wx.request({
+            url: 'http://127.0.0.1/wechat/index.json', //仅为示例，并非真实的接口地址
+            // data: null,
+            header: {
+                'Content-Type': 'application/json'
+            },
+            success: function(res) {
+              callback && callback(res.data);
+            },
+            fail:function(err){
+              err;
+            }
+        });
   }
 }
 
@@ -33,11 +48,7 @@ Page({
     currentItem:'推荐',
     colorsArr:['#6F5499','#1E69AD','#59AF50','#563D7C',
     '#CF4646','#3998DB','#51A67B','#EFD65B','#653A54','#5BB69A'],
-    imgArr:[
-      'http://yanxuan.nosdn.127.net/7009d5548e9b474f8e8bd298fb1f6165.jpg?imageView&quality=85&thumbnail=750x400',
-      'http://yanxuan.nosdn.127.net/a92bf91b3f4ae8e2c413fab0b95663e8.jpg?imageView&quality=85&thumbnail=750x400',
-      'http://yanxuan.nosdn.127.net/2c0982973bf8d945a2b61d2e22c39165.jpg?imageView&quality=85&thumbnail=750x400'
-    ]
+    imgArr:[]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -46,7 +57,6 @@ Page({
     })
   },
   onLoad: function () {
-    console.log('onLoad')
     var that = this
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
@@ -54,7 +64,13 @@ Page({
       that.setData({
         userInfo:userInfo
       })
-    })
+    });
+    myHome.getJsonData(function(data){
+        that.setData({
+          imgArr:data.banners,
+          goodsBrand:data.goods.goodsBrand
+        });
+    });
   },
   selecteClass:function(event){
      var target=event.target,

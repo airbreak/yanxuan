@@ -21,7 +21,9 @@
         autoplay="true" interval="3000">
           <block wx:for="{{imgArr}}">
               <swiper-item>
-                <image src="{{item}}" class="slide-image" width="355" height="160"/>
+              <navigator url="{{item.link}}">
+                <image src="{{item.url}}" class="slide-image" width="355" height="160"/>
+              </navigator>
               </swiper-item>
           </block>
         </swiper>
@@ -42,25 +44,25 @@
               <view class="goods-brand-left">
                 <view class="goods-detail goods-brand-left-item">
                   <view class="desc-box">
-                    <text>MUJI制造商</text>
-                    <text>14.9元起</text>
+                    <text>{{goodsBrand[0].title}}</text>
+                    <text>{{goodsBrand[0].priceDesc}}</text>
                   </view>
-                  <image src="http://yanxuan.nosdn.127.net/8281db53767ce4beef0cbe2e8bfd98a8.jpg"></image>
+                  <image src="{{goodsBrand[0].url}}"></image>
                 </view>
                 <view class="goods-detail goods-brand-left-item">
                 <view class="desc-box">
-                    <text>MUJI制造商</text>
-                    <text>14.9元起</text>
+                    <text>{{goodsBrand[1].title}}</text>
+                    <text>{{goodsBrand[1].priceDesc}}</text>
                   </view>
-                  <image src="http://yanxuan.nosdn.127.net/6f954ea8cee30e161dda048ffbfd950f.png"></image>
+                  <image src="{{goodsBrand[1].url}}"></image>
                 </view>
               </view>
               <view class="goods-detail goods-brand-right">
                 <view class="desc-box">
-                    <text>MUJI制造商</text>
-                    <text>14.9元起</text>
+                    <text>{{goodsBrand[2].title}}</text>
+                    <text>{{goodsBrand[2].priceDesc}}</text>
                   </view>
-                  <image src="http://yanxuan.nosdn.127.net/6548c0989c1588f3ded4b711d6ff259d.jpg"></image>
+                  <image src="{{goodsBrand[2].url}}"></image>
               </view>
             </view>
           </view>
