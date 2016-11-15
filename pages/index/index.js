@@ -66,9 +66,12 @@ Page({
       })
     });
     myHome.getJsonData(function(data){
+      // data=JSON.parse(data);
         that.setData({
-          imgArr:data.banners,
-          goodsBrand:data.goods.goodsBrand
+          imgArr: data.banners,
+          goodsBrand:data.goods.goodsBrand,
+          goodsNewArr:data.goods.goodsNewArr,
+          goodsRecommentArr:data.goods.goodsRecommentArr
         });
     });
   },

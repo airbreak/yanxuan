@@ -13,7 +13,7 @@
       <text class="nav-item {{classArr[item.title==currentItem?0:1]}}" data-index="{{$index}}" bindtap="selecteClass" data-title-name="{{item.title}}">{{item.title}}</text>
     </block>
   </scroll-view>
-  <view class="view-box">
+  <scroll-view scroll-y="true" class="view-box">
 
       <!--推荐 start-->
       <view class="view-item-box {{viewClassArr['推荐'==currentItem?0:1]}} recomend">
@@ -38,19 +38,21 @@
 
         <!--商品列表-->
         <view class="goods-box">
+
+          <!-- 品牌制造商提供 -->
           <view class="goods-item goods-brand">
-            <view class="good-item-head"><text>品牌制造商直供</text></view>
-            <view class="good-item-body">
+            <view class="goods-item-head"><text>品牌制造商直供</text></view>
+            <view class="goods-item-body goods-item-body-boxstyle">
               <view class="goods-brand-left">
                 <view class="goods-detail goods-brand-left-item">
-                  <view class="desc-box">
+                  <view class="goods-desc-box">
                     <text>{{goodsBrand[0].title}}</text>
                     <text>{{goodsBrand[0].priceDesc}}</text>
                   </view>
                   <image src="{{goodsBrand[0].url}}"></image>
                 </view>
                 <view class="goods-detail goods-brand-left-item">
-                <view class="desc-box">
+                <view class="goods-desc-box">
                     <text>{{goodsBrand[1].title}}</text>
                     <text>{{goodsBrand[1].priceDesc}}</text>
                   </view>
@@ -58,7 +60,7 @@
                 </view>
               </view>
               <view class="goods-detail goods-brand-right">
-                <view class="desc-box">
+                <view class="goods-desc-box">
                     <text>{{goodsBrand[2].title}}</text>
                     <text>{{goodsBrand[2].priceDesc}}</text>
                   </view>
@@ -66,6 +68,41 @@
               </view>
             </view>
           </view>
+
+          <!-- 新品 -->
+          <view class="goods-item goods-new">
+             <view class="goods-item-head"><text>周一周四新品首发</text></view>
+            <view class="goods-item-body goods-item-body-boxstyle">
+             <block wx:for="{{goodsNewArr}}" wx:for-index="idx" wx:if="{{idx<=3}}">
+              <view class="goods-detail goods-new-item">
+                <image src="{{item.url}}"></image>
+                <text class="title">{{item.title}}</text>
+                <view class="price">{{item.priceDesc}}</view>
+              </view>
+              </block>
+            </view>
+          </view> 
+
+          <!-- 人气推荐 -->
+          <view class="goods-item goods-recommend">
+             <view class="goods-item-head"><text>人气推荐</text></view>
+            <view class="goods-item-body">
+              <block wx:for="{{goodsRecommentArr}}" wx:for-index="idx" wx:if="{{idx<=2}}">
+                <view class="goods-recomment-item">
+                  <view class="left">
+                    <image src="{{item.url}}"></image>
+                  </view>
+                  <view class="right">
+                    <text class="title">{{item.title}}</text>
+                    <text>{{item.desc}}</text>
+                    <text class="price">{{item.priceDesc}}</text>
+                    <text >{{item.colorInfo}}</text>
+                  </view>
+                </view>
+              </block>
+            </view>
+          </view> 
+
         </view>
 
       </view>
@@ -80,5 +117,5 @@
       <view class="view-item-box {{viewClassArr[navArr[7].title==currentItem?0:1]}}"></view>
       <view class="view-item-box {{viewClassArr[navArr[8].title==currentItem?0:1]}}"></view>
       <view class="view-item-box {{viewClassArr[navArr[9].title==currentItem?0:1]}}"></view>
-  </view>
+  </scroll-view>
 </view>
