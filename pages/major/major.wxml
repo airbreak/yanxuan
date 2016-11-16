@@ -1,4 +1,4 @@
-<swiper indicator-dots="{{indicatorDots}}"
+<swiper indicator-dots=false
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{imgUrls}}">
     <swiper-item>

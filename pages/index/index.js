@@ -48,7 +48,8 @@ Page({
     currentItem:'推荐',
     colorsArr:['#6F5499','#1E69AD','#59AF50','#563D7C',
     '#CF4646','#3998DB','#51A67B','#EFD65B','#653A54','#5BB69A'],
-    imgArr:[]
+    imgArr:[],
+    specialSwiper:{dot:false,auto:false}
   },
   //事件处理函数
   bindViewTap: function() {
@@ -71,7 +72,9 @@ Page({
           imgArr: data.banners,
           goodsBrand:data.goods.goodsBrand,
           goodsNewArr:data.goods.goodsNewArr,
-          goodsRecommentArr:data.goods.goodsRecommentArr
+          goodsRecommentArr:data.goods.goodsRecommentArr,
+          goodsSpecialArr:data.goods.goodsSpecialArr,
+          goodsHomeArr:data.goods.goodsHomeArr
         });
     });
   },

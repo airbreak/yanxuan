@@ -89,8 +89,10 @@
 }
 
 /*推荐页面*/
-.view-item-box.recomend swiper{
+.view-item-box.recomend .top-swiper{
   height: 420rpx;
+}
+.view-item-box.recomend swiper{
   width: 100%;
 }
 .view-item-box.recomend swiper image{
@@ -277,9 +279,63 @@
   -webkit-box-flex: 1;
   width:1%;
 }
+
 .goods-recomment-item image{
-  width: 270rpx;
-  height: 270rpx;
+  width: 290rpx;
+  height: 290rpx;
   display: block;
   margin:0 auto;
 } 
+.goods-recomment-item .right{
+  padding:40rpx 0;  
+}
+.goods-recomment-item .right text{
+  display: block;
+}
+.goods-recomment-item .right .title{
+  color: #333333;
+  font-size: 32rpx;
+}
+.goods-recomment-item .right .desc{
+  margin-top: 24rpx;
+  color: #7f7f7f;
+  font-size: 30rpx;
+}
+.goods-recomment-item .right .price{
+  text-align: left;
+}
+
+
+/**/
+.goods-recomment-item .right .color-info{
+  margin-top: 30rpx;
+  color: #7f7f7f;
+  font-size: 30rpx;
+}
+
+/*专题*/
+.goods-special swiper{
+  height: 570rpx;
+}
+
+.goods-special image{
+  height: 420rpx;
+}
+.goods-special-desc-box{
+  height: 80rpx;
+  padding: 30rpx;
+}
+.goods-special-desc-box .title{
+  color: #333333;
+  font-size: 32rpx;
+}
+.goods-special-desc-box .price{
+  display: inline;
+  margin-left: 10rpx;
+}
+.goods-special-desc-box .desc{
+  margin-top: 15rpx;
+  display: block;
+  color: #7f7f7f;
+  font-size: 28rpx;
+}

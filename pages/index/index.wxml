@@ -18,7 +18,7 @@
       <!--推荐 start-->
       <view class="view-item-box {{viewClassArr['推荐'==currentItem?0:1]}} recomend">
         <swiper indicator-dots="true" 
-        autoplay="true" interval="3000">
+        autoplay="true" interval="3000" class="top-swiper">
           <block wx:for="{{imgArr}}">
               <swiper-item>
               <navigator url="{{item.link}}">
@@ -94,16 +94,53 @@
                   </view>
                   <view class="right">
                     <text class="title">{{item.title}}</text>
-                    <text>{{item.desc}}</text>
-                    <text class="price">{{item.priceDesc}}</text>
-                    <text >{{item.colorInfo}}</text>
+                    <text class="desc">{{item.desc}}</text>
+                    <text class="price">¥{{item.priceDesc}}</text>
+                    <text class="color-info">{{item.colorInfo}}</text>
                   </view>
                 </view>
               </block>
             </view>
           </view> 
 
+
+          <!-- 专题精选 -->
+          <view class="goods-item goods-special">
+             <view class="goods-item-head"><text>专题精选</text></view>
+             <view class="goods-item-body">
+                <swiper indicator-dots="{{specialSwiper.dot}}" autoplay="{{specialSwiper.auto}}">
+                <block wx:for="{{goodsSpecialArr}}">
+                    <swiper-item>
+                      <navigator url="{{item.link}}">
+                        <image src="{{item.url}}" class="slide-image"/>
+                        <view class="goods-special-desc-box">
+                          <text class="title">{{item.title}}</text>
+                          <text class="price">{{item.priceDesc}}</text>
+                          <text class="desc">{{item.desc}}</text>
+                        </view>
+                      </navigator>
+                    </swiper-item>
+                </block>
+              </swiper>
+            </view>
+          </view> 
+
+          <!-- 居家好物 -->
+          <view class="goods-item goods-special">
+             <view class="goods-item-head"><text>居家好物</text></view>
+             <view class="goods-item-body goods-item-body-boxstyle">
+               <block wx:for="{{goodsHomeArr}}" wx:for-index="idx" wx:if="{{idx<=6}}">
+                <view class="goods-detail goods-new-item">
+                  <image src="{{item.url}}"></image>
+                  <text class="title">{{item.title}}</text>
+                  <view class="price">{{item.priceDesc}}</view>
+                </view>
+              </block>
+            </view>
         </view>
+
+      </view>
+
 
       </view>
       <!--推荐 end-->
