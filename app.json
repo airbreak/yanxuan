@@ -7,10 +7,10 @@
     "pages/myselft/myselft"
   ],
   "window":{
-    "navigationBarTitleText": "Demo",
+    "navigationBarTitleText": "",
     "navigationBarTextStyle": "white",
-    "navigationBarBackgroundColor": "#000000",
-    "backgroundColor": "#ffffff",
+    "navigationBarBackgroundColor": "#B19E76",
+    "backgroundColor": "#B19E76",
     "backgroundTextStyle": "dark"
   },
   "tabBar":{

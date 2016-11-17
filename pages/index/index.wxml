@@ -1,18 +1,22 @@
 <view class="container home-container">
-  <view class="logo-search-box">
-    <view class="logo-box">
-      <image src="../../imgs/logo.png"></image>
-    </view>
-    <view class="search-box">
-      <icon type="search" size="16" color="{{item}}"/>
-      <input id="search-input"  maxlength="10" placeholder="搜素商品，共2012件好物" />
-    </view>
+  <view class="head-box">
+      <view class="logo-search-box">
+        <view class="logo-box">
+          <image src="../../imgs/logo.png"></image>
+        </view>
+        <view class="search-box">
+          <icon type="search" size="16" color="{{item}}"/>
+          <input id="search-input"  maxlength="10" placeholder="搜素商品，共2012件好物" />
+        </view>
+      </view>
+      <view class="nav-box">
+          <scroll-view scroll-x="true">
+            <block wx:for="{{navArr}}">
+              <text class="nav-item {{classArr[item.title==currentItem?0:1]}}" data-index="{{$index}}" bindtap="selecteClass" data-title-name="{{item.title}}">{{item.title}}</text>
+            </block>
+          </scroll-view>
+      </view>
   </view>
-  <scroll-view scroll-x="true" class="nav-box">
-    <block wx:for="{{navArr}}">
-      <text class="nav-item {{classArr[item.title==currentItem?0:1]}}" data-index="{{$index}}" bindtap="selecteClass" data-title-name="{{item.title}}">{{item.title}}</text>
-    </block>
-  </scroll-view>
   <scroll-view scroll-y="true" class="view-box">
 
       <!--推荐 start-->
