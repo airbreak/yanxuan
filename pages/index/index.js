@@ -15,7 +15,7 @@ Home.prototype={
   },
   getJsonData:function(callback){
     wx.request({
-            url: 'http://127.0.0.1/wechat/index.json', //仅为示例，并非真实的接口地址
+            url: 'http://127.0.0.1/neteasy_yanxuan/pages/index/data.json', //仅为示例，并非真实的接口地址
             // data: null,
             header: {
                 'Content-Type': 'application/json'
