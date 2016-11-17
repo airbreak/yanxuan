@@ -1,8 +1,8 @@
 {
-  "navigationBarBackgroundColor": "#ffffff",
-  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#B19E76",
+  "navigationBarTextStyle": "#fff",
   "navigationBarTitleText": "首页",
-  "backgroundColor": "#000",
+  "backgroundColor": "#B19E76",
   "backgroundTextStyle": "light",
   "banners":[
     {"id":1,
