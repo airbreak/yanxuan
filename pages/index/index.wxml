@@ -130,16 +130,29 @@
           </view> 
 
           <!-- 居家好物 -->
-          <view class="goods-item goods-special">
+          <view class="goods-item goods-home">
              <view class="goods-item-head"><text>居家好物</text></view>
              <view class="goods-item-body goods-item-body-boxstyle">
-               <block wx:for="{{goodsHomeArr}}" wx:for-index="idx" wx:if="{{idx<=6}}">
-                <view class="goods-detail goods-new-item">
-                  <image src="{{item.url}}"></image>
-                  <text class="title">{{item.title}}</text>
-                  <view class="price">{{item.priceDesc}}</view>
-                </view>
-              </block>
+                   <block wx:for="{{goodsHomeArr}}" wx:for-index="idx" wx:if="{{idx<=6}}">
+                        <view wx:if="{{idx%2==0}}" class="goods-detail goods-new-item odd">
+                          <image class="good-image" src="{{item.url}}"></image>
+                          <text class="title">{{item.title}}</text>
+                          <view class="price">{{item.priceDesc}}</view>
+                        </view>
+                       <view wx:else class="goods-detail goods-new-item">
+                           <image class="good-image" src="{{item.url}}"></image>
+                           <text class="title">{{item.title}}</text>
+                           <view class="price">{{item.priceDesc}}</view>
+                       </view>
+                  </block>
+                  <view class="goods-detail goods-new-item more-goods-item">
+                      <view class="more-goods-item-box">
+                          <text class="title">更多居家好物</text>
+                          <view>
+                            <image class="more-goods-btn" src="../../imgs/more-btn.png"></image>
+                          </view>
+                      </view>
+                  </view>
             </view>
         </view>
 
