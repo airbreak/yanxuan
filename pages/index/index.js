@@ -1,34 +1,64 @@
 //index.js
+//var HttpRequest = require('../../utils/httprequest.js');
+//class HomeRecommend extends HttpRequest{
+//    constructor(){
+//
+//    }
+//
+//    getIndexForNavMenu(name){
+//        var len=navArr.length
+//        for(var i=0;i<len;i++){
+//            if(name==navArr[i]){
+//                return i;
+//            }
+//        }
+//    }
+//    getJsonData(callback){
+//        wx.request({
+//            url: 'http://127.0.0.1/neteasy_yanxuan/pages/index/data.json', //仅为示例，并非真实的接口地址
+//            // data: null,
+//            header: {
+//                'Content-Type': 'application/json'
+//            },
+//            success: function(res) {
+//                callback && callback(res.data);
+//            },
+//            fail:function(err){
+//                err;
+//            }
+//        });
+//    }
+//
+//};
 
-function Home(){
 
+class HttpRequest12{
+    constructor(){
+
+    }
+    request() {
+        console.log('123');
+    }
 };
 
-Home.prototype={
-  getIndexForNavMenu:function(name){
-    var len=navArr.length
-    for(var i=0;i<len;i++){
-      if(name==navArr[i]){
-        return i;
-      }
+
+class HomeRecommend12 extends HttpRequest12{
+    constructor(){
+        super()
     }
-  },
-  getJsonData:function(callback){
-    wx.request({
-            url: 'http://127.0.0.1/neteasy_yanxuan/pages/index/data.json', //仅为示例，并非真实的接口地址
-            // data: null,
-            header: {
-                'Content-Type': 'application/json'
-            },
-            success: function(res) {
-              callback && callback(res.data);
-            },
-            fail:function(err){
-              err;
+
+    getIndexForNavMenu(name){
+        var len=navArr.length
+        for(var i=0;i<len;i++){
+            if(name==navArr[i]){
+                return i;
             }
-        });
-  }
-}
+        }
+    }
+};
+
+var home1=new HomeRecommend12();
+home1.request();
 
 //获取应用实例
 var app = getApp()
@@ -39,7 +69,7 @@ var navArr=[{title:'推荐',index:0},
 {title:'婴童',index:6},{title:'杂货',index:7},
 {title:'饮食',index:8},{title:'其它',index:9}]
 var classArr=['selected'];
-var myHome=new Home()
+var myHome=new HomeRecommend()
 Page({
   data: {
     navArr:navArr,
