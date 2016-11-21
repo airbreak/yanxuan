@@ -2,9 +2,10 @@
   "pages":[
     "pages/index/index",
     "pages/major/major",
-    "pages/class/class",
+    "pages/goodsclass/goodsclass",
     "pages/buycar/buycar",
-    "pages/myselft/myselft"
+    "pages/myselft/myselft",
+    "pages/index/goodsitemtemp"
   ],
   "window":{
     "navigationBarTitleText": "",
@@ -25,9 +26,9 @@
         "selectedIconPath":"imgs/major.jpg",
         "text":"专题"
       },{
-        "pagePath":"pages/class/class",
-        "iconPath":"imgs/class.jpg",
-        "selectedIconPath":"imgs/class.jpg",
+        "pagePath":"pages/goodsclass/goodsclass",
+        "iconPath":"imgs/goodsclass.jpg",
+        "selectedIconPath":"imgs/goodsclass.jpg",
         "text":"分类"
       },{
         "pagePath":"pages/buycar/buycar",

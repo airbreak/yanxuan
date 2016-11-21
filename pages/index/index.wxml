@@ -1,3 +1,4 @@
+<import src="goodsitemtemp123.wxml"/>
 <view class="container home-container">
   <view class="head-box">
       <view class="logo-search-box">
@@ -11,16 +12,16 @@
       </view>
       <view class="nav-box">
           <scroll-view scroll-x="true">
-            <block wx:for="{{navArr}}">
-              <text class="nav-item {{classArr[item.title==currentItem?0:1]}}" data-index="{{$index}}" bindtap="selecteClass" data-title-name="{{item.title}}">{{item.title}}</text>
+            <block wx:for="{{navArr}}" wx:for-index="idx">
+              <text class="nav-item {{classArr[idx==currentItem?0:1]}}" data-index="{{idx}}" bindtap="selecteClass" data-title-name="{{item}}">{{item}}</text>
             </block>
           </scroll-view>
       </view>
   </view>
-  <scroll-view scroll-y="true" class="view-box">
+    <scroll-view scroll-y="true" class="view-box" bindscrolltolower="loadMoreGoods" lower-threshold="{{threshold}}">
 
       <!--推荐 start-->
-      <view class="view-item-box {{viewClassArr['推荐'==currentItem?0:1]}} recomend">
+      <view class="view-item-box {{viewClassArr[0==currentItem?0:1]}} recomend">
         <swiper indicator-dots="true" 
         autoplay="true" interval="3000" class="top-swiper">
           <block wx:for="{{imgArr}}">
@@ -130,7 +131,7 @@
           </view> 
 
           <!-- 居家好物 -->
-          <view class="goods-item goods-home">
+            <view class="goods-item goods-home">
              <view class="goods-item-head"><text>居家好物</text></view>
              <view class="goods-item-body goods-item-body-boxstyle">
                    <block wx:for="{{goodsHomeArr}}" wx:for-index="idx" wx:if="{{idx<=6}}">
@@ -156,20 +157,109 @@
             </view>
         </view>
 
+
+
+            <!-- 餐厨好物 -->
+            <view class="goods-item goods-home"  hidden="{{!moreData1}}">
+                <view class="goods-item-head"><text>餐厨好物</text></view>
+                <view class="goods-item-body goods-item-body-boxstyle">
+                    <block wx:for="{{goodsKitchenArr}}" wx:for-index="idx" wx:if="{{idx<=6}}">
+                        <view wx:if="{{idx%2==0}}" class="goods-detail goods-new-item odd">
+                            <image class="good-image" src="{{item.url}}"></image>
+                            <text class="title">{{item.title}}</text>
+                            <view class="price">{{item.priceDesc}}</view>
+                        </view>
+                        <view wx:else class="goods-detail goods-new-item">
+                            <image class="good-image" src="{{item.url}}"></image>
+                            <text class="title">{{item.title}}</text>
+                            <view class="price">{{item.priceDesc}}</view>
+                        </view>
+                    </block>
+                    <view class="goods-detail goods-new-item more-goods-item">
+                        <view class="more-goods-item-box">
+                            <text class="title">更多餐厨好物</text>
+                            <view>
+                                <image class="more-goods-btn" src="../../imgs/more-btn.png"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+            <!-- 配件好物 -->
+            <view class="goods-item goods-home"  hidden="{{!moreData1}}">
+                <view class="goods-item-head"><text>配件好物</text></view>
+                <view class="goods-item-body goods-item-body-boxstyle">
+                    <block wx:for="{{goodsPartsArr}}" wx:for-index="idx" wx:if="{{idx<=6}}">
+                        <view wx:if="{{idx%2==0}}" class="goods-detail goods-new-item odd">
+                            <image class="good-image" src="{{item.url}}"></image>
+                            <text class="title">{{item.title}}</text>
+                            <view class="price">{{item.priceDesc}}</view>
+                        </view>
+                        <view wx:else class="goods-detail goods-new-item">
+                            <image class="good-image" src="{{item.url}}"></image>
+                            <text class="title">{{item.title}}</text>
+                            <view class="price">{{item.priceDesc}}</view>
+                        </view>
+                    </block>
+                    <view class="goods-detail goods-new-item more-goods-item">
+                        <view class="more-goods-item-box">
+                            <text class="title">更多配件好物</text>
+                            <view>
+                                <image class="more-goods-btn" src="../../imgs/more-btn.png"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+            <!-- 服装好物 -->
+            <view class="goods-item goods-home"  hidden="{{!moreData1}}">
+                <view class="goods-item-head"><text>服装好物</text></view>
+                <view class="goods-item-body goods-item-body-boxstyle">
+                    <block wx:for="{{goodsClothesArr}}" wx:for-index="idx" wx:if="{{idx<=6}}">
+                        <view wx:if="{{idx%2==0}}" class="goods-detail goods-new-item odd">
+                            <image class="good-image" src="{{item.url}}"></image>
+                            <text class="title">{{item.title}}</text>
+                            <view class="price">{{item.priceDesc}}</view>
+                        </view>
+                        <view wx:else class="goods-detail goods-new-item">
+                            <image class="good-image" src="{{item.url}}"></image>
+                            <text class="title">{{item.title}}</text>
+                            <view class="price">{{item.priceDesc}}</view>
+                        </view>
+                    </block>
+                    <view class="goods-detail goods-new-item more-goods-item">
+                        <view class="more-goods-item-box">
+                            <text class="title">更多服装好物</text>
+                            <view>
+                                <image class="more-goods-btn" src="../../imgs/more-btn.png"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+            <template is="goods-item-temp"
+                      data="{{className:'goods-washing',title:'洗涤好物'}}"/>
+
       </view>
 
 
       </view>
       <!--推荐 end-->
 
-      <view class="view-item-box {{viewClassArr[navArr[1].title==currentItem?0:1]}}"></view>
-      <view class="view-item-box {{viewClassArr[navArr[2].title==currentItem?0:1]}}"></view>
-      <view class="view-item-box {{viewClassArr[navArr[3].title==currentItem?0:1]}}"></view>
-      <view class="view-item-box {{viewClassArr[navArr[4].title==currentItem?0:1]}}"></view>
-      <view class="view-item-box {{viewClassArr[navArr[5].title==currentItem?0:1]}}"></view>
-      <view class="view-item-box {{viewClassArr[navArr[6].title==currentItem?0:1]}}"></view>
-      <view class="view-item-box {{viewClassArr[navArr[7].title==currentItem?0:1]}}"></view>
-      <view class="view-item-box {{viewClassArr[navArr[8].title==currentItem?0:1]}}"></view>
-      <view class="view-item-box {{viewClassArr[navArr[9].title==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[1==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[2==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[3==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[4==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[5==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[6==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[7==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[8==currentItem?0:1]}}"></view>
+      <view class="view-item-box {{viewClassArr[9==currentItem?0:1]}}"></view>
   </scroll-view>
+  <loading hidden="{{loadingHidden}}">
+    加载中...
+  </loading>
 </view>
