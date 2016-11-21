@@ -37,6 +37,15 @@ class HomeRecommend extends Base{
         this.request(param);
     }
 
+    getMoreGoodsData3(callback){
+        var param={
+            url: 'http://127.0.0.1/neteasy_yanxuan/pages/index/moredata3.json', //仅为示例，并非真实的接口地址
+            sCallback:function(data){
+                callback && callback(data);
+            }
+        };
+        this.request(param);
+    }
 };
 
 //获取应用实例
@@ -57,9 +66,9 @@ Page({
           modalHidden:true,
           loadingHidden:true,
           threshold:200,
-          moreData1:false,
-          moreData2:false,
-          moreData3:false,
+          moreData1:true,
+          moreData2:true,
+          moreData3:true,
       },
       //事件处理函数
       bindViewTap: function() {
@@ -109,29 +118,39 @@ Page({
 
       //滚动加载更多商品
       loadMoreGoods:function(){
-          if(!this.data.moreData1) {
+          if(this.data.moreData1) {
               myHome.getMoreGoodsData1((data)=> {
                   this.setData({
-                      moreData1: true,
+                      moreData1: false,
                       goodsKitchenArr: data.goodsKitchenArr,
                       goodsPartsArr: data.goodsPartsArr,
                       goodsClothesArr: data.goodsClothesArr
                   });
               });
+              return;
           }
-          //if(!this.data.moreData2){
-          //    myHome.getMoreGoodsData2((data)=> {
-          //        this.setData({
-          //            moreData2: true,
-          //            goodsKitchenArr: data.goodsKitchenArr,
-          //            goodsPartsArr: data.goodsPartsArr,
-          //            goodsClothesArr: data.goodsClothesArr
-          //        });
-          //    });
-          //}
+          if(this.data.moreData2){
+              myHome.getMoreGoodsData2((data)=> {
+                  this.setData({
+                      moreData2: false,
+                      goodsWashingArr: data.goodsWashingArr,
+                      goodsBabyArr: data.goodsBabyArr,
+                      goodsGroceriesArr: data.goodsGroceriesArr
+                  });
+              });
+              return;
+          }
+          if(this.data.moreData3){
+              myHome.getMoreGoodsData3((data)=> {
+                  this.setData({
+                      moreData3: false,
+                      goodsFoodArr: data.goodsFoodArr,
+                      goodsOtherArr: data.goodsOtherArr
+                  });
+              });
+              return;
+          }
       },
-
-
 })
 
 

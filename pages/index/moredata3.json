@@ -1,5 +1,5 @@
 {
-    "goodsWashingArr":[
+    "goodsFoodArr":[
         {"title":"3D纯棉护颈波浪记忆枕",
             "priceDesc":"119元",
             "url":"http://yanxuan.nosdn.127.net/88159bd603a4a487dab3684c7ff0f70c.png?imageView&quality=85&thumbnail=330x330",
@@ -31,39 +31,7 @@
             "url":"http://yanxuan.nosdn.127.net/460dbe8a0ae1c6e7ca0444a9221845dc.png?imageView&quality=85&thumbnail=330x330"
         }
     ],
-    "goodsBabyArr":[
-        {"title":"3D纯棉护颈波浪记忆枕",
-            "priceDesc":"119元",
-            "url":"http://yanxuan.nosdn.127.net/88159bd603a4a487dab3684c7ff0f70c.png?imageView&quality=85&thumbnail=330x330",
-            "colorInfo":"四色可选"
-        },{
-            "title":"圆形护颈苦荞麦枕",
-            "priceDesc":"69元起",
-            "url":"http://yanxuan.nosdn.127.net/ffd2c91c7cf9c6e0f630595f7679b95d.png?imageView&quality=85&thumbnail=330x330"
-        },{
-            "title":"白鹅绒秋冬加厚羽绒被",
-            "priceDesc":"1189元起",
-            "url":"http://yanxuan.nosdn.127.net/8326e257f8a9a38d237c10a51fee3a9d.png?imageView&quality=85&thumbnail=330x330"
-        },{
-            "title":"全棉针织条纹四件套",
-            "priceDesc":"325元起",
-            "url":"http://yanxuan.nosdn.127.net/fbe496d64b68869083bcfb4b87d79395.png?imageView&quality=85&thumbnail=330x330"
-        },
-        {"title":"多功能午睡枕",
-            "priceDesc":"79元",
-            "url":"http://yanxuan.nosdn.127.net/c0b4edbb014e8e15d519af5920ba15ee.png?imageView&quality=85&thumbnail=330x330",
-            "colorInfo":"四色可选"
-        },{
-            "title":"日式记忆绵坐垫",
-            "priceDesc":"59元",
-            "url":"http://yanxuan.nosdn.127.net/2a95b16f5b147cab4845641bee738a2e.png?imageView&quality=85&thumbnail=330x330"
-        },{
-            "title":"日式纯棉针织条纹抱枕",
-            "priceDesc":"59元起",
-            "url":"http://yanxuan.nosdn.127.net/460dbe8a0ae1c6e7ca0444a9221845dc.png?imageView&quality=85&thumbnail=330x330"
-        }
-    ],
-    "goodsGroceriesArr":[
+    "goodsOtherArr":[
         {"title":"3D纯棉护颈波浪记忆枕",
             "priceDesc":"119元",
             "url":"http://yanxuan.nosdn.127.net/88159bd603a4a487dab3684c7ff0f70c.png?imageView&quality=85&thumbnail=330x330",

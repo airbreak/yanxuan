@@ -4,8 +4,7 @@
     "pages/major/major",
     "pages/goodsclass/goodsclass",
     "pages/buycar/buycar",
-    "pages/myselft/myselft",
-    "pages/index/goodsitemtemp"
+    "pages/myselft/myselft"
   ],
   "window":{
     "navigationBarTitleText": "",
