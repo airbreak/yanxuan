@@ -5,11 +5,12 @@ var Base = Util.base;
 class HomeRecommend extends Base{
     constructor(){
         super();
-        this.navArr=['推荐','居家','餐具','配件','服装','洗护','婴童','杂货','饮食','其它']
+        this.navArr=['推荐','居家','餐具','配件','服装','洗护','婴童','杂货','饮食','其它'];
+        this.baseUrl='http://127.0.0.1/yanxuan/pages/index/';
     }
     getJsonData(callback){
         var param={
-            url: 'http://127.0.0.1/neteasy_yanxuan/pages/index/data.json', //仅为示例，并非真实的接口地址
+            url: this.baseUrl+'data.json', //仅为示例，并非真实的接口地址
             sCallback:function(data){
                 callback && callback(data);
             }
@@ -19,7 +20,7 @@ class HomeRecommend extends Base{
 
     getMoreGoodsData1(callback){
         var param={
-            url: 'http://127.0.0.1/neteasy_yanxuan/pages/index/moredata1.json', //仅为示例，并非真实的接口地址
+            url: this.baseUrl+'moredata1.json', //仅为示例，并非真实的接口地址
             sCallback:function(data){
                 callback && callback(data);
             }
@@ -29,7 +30,7 @@ class HomeRecommend extends Base{
 
     getMoreGoodsData2(callback){
         var param={
-            url: 'http://127.0.0.1/neteasy_yanxuan/pages/index/moredata2.json', //仅为示例，并非真实的接口地址
+            url: this.baseUrl+'moredata2.json', //仅为示例，并非真实的接口地址
             sCallback:function(data){
                 callback && callback(data);
             }
@@ -39,7 +40,7 @@ class HomeRecommend extends Base{
 
     getMoreGoodsData3(callback){
         var param={
-            url: 'http://127.0.0.1/neteasy_yanxuan/pages/index/moredata3.json', //仅为示例，并非真实的接口地址
+            url: this.baseUrl+'moredata3.json', //仅为示例，并非真实的接口地址
             sCallback:function(data){
                 callback && callback(data);
             }
