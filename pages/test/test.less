@@ -1,0 +1,19 @@
+.size(@w:100%,@h:auto){
+  width: @w;
+  height: @h;
+}
+.wrapper{
+  margin: 0;
+  padding: 0;
+  @height:35rpx;
+  .nav-tab{
+    height: @height;
+    line-height: @height;
+    &:before{
+      content: '|';
+      display: inline-block;
+      background-color: red;
+      .size(100%,100%);
+    }
+  }
+}

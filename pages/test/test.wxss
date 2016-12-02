@@ -1,0 +1,15 @@
+.wrapper {
+  margin: 0;
+  padding: 0;
+}
+.wrapper .nav-tab {
+  height: 35rpx;
+  line-height: 35rpx;
+}
+.wrapper .nav-tab:before {
+  content: '|';
+  display: inline-block;
+  background-color: red;
+  width: 100%;
+  height: 100%;
+}
