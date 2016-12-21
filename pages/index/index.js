@@ -6,12 +6,15 @@ class HomeRecommend extends Base{
     constructor(){
         super();
         this.navArr=['推荐','居家','餐具','配件','服装','洗护','婴童','杂货','饮食','其它'];
-        this.baseUrl='http://127.0.0.1/yanxuan/pages/index/';
+        this.baseUrl='http://7xqnxu.com1.z0.glb.clouddn.com/yanxuan_';
+
     }
     getJsonData(callback){
         var param={
-            url: this.baseUrl+'data.json', //仅为示例，并非真实的接口地址
+            url: this.baseUrl+'data.json',
             sCallback:function(data){
+                console.log('ok:')
+                console.log(data);
                 callback && callback(data);
             }
         };
@@ -20,7 +23,7 @@ class HomeRecommend extends Base{
 
     getMoreGoodsData1(callback){
         var param={
-            url: this.baseUrl+'moredata1.json', //仅为示例，并非真实的接口地址
+            url: this.baseUrl+'moredata1.json',
             sCallback:function(data){
                 callback && callback(data);
             }
@@ -30,7 +33,7 @@ class HomeRecommend extends Base{
 
     getMoreGoodsData2(callback){
         var param={
-            url: this.baseUrl+'moredata2.json', //仅为示例，并非真实的接口地址
+            url: this.baseUrl+'moredata2.json',
             sCallback:function(data){
                 callback && callback(data);
             }
