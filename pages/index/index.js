@@ -10,8 +10,10 @@ class HomeRecommend extends Base{
     }
     getJsonData(callback){
         var param={
-            url: this.baseUrl+'data.json', //仅为示例，并非真实的接口地址
+            url: this.baseUrl+'data.json',
             sCallback:function(data){
+                console.log('ok:')
+                console.log(data);
                 callback && callback(data);
             }
         };
@@ -20,7 +22,7 @@ class HomeRecommend extends Base{
 
     getMoreGoodsData1(callback){
         var param={
-            url: this.baseUrl+'moredata1.json', //仅为示例，并非真实的接口地址
+            url: this.baseUrl+'moredata1.json',
             sCallback:function(data){
                 callback && callback(data);
             }
@@ -30,7 +32,7 @@ class HomeRecommend extends Base{
 
     getMoreGoodsData2(callback){
         var param={
-            url: this.baseUrl+'moredata2.json', //仅为示例，并非真实的接口地址
+            url: this.baseUrl+'moredata2.json',
             sCallback:function(data){
                 callback && callback(data);
             }
