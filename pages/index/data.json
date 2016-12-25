@@ -68,7 +68,8 @@
         "desc":"匠心品质，成就商务时尚",
 	      "priceDesc":"499",
 	      "url":"http://yanxuan.nosdn.127.net/79691bf79c26fdf1b12a57b8a0e4ce0c.png",
-	      "colorInfo":"四色可选"
+	      "colorInfo":"四色可选",
+          "flag":true
       }
     ],
     "goodsSpecialArr":[

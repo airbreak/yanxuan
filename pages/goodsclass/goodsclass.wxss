@@ -1,0 +1,9 @@
+.comment-main-box{
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0rpx;
+    right: 0;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+}

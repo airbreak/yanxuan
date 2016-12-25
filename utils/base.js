@@ -12,7 +12,7 @@ class Base{
     request(param) {
         wx.request({
             url: param.url,
-            data: param.data,
+            //data: param.data,
             header: {
                 'Content-Type': 'application/json'
             },

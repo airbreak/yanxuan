@@ -6,7 +6,7 @@ class HomeRecommend extends Base{
     constructor(){
         super();
         this.navArr=['推荐','居家','餐具','配件','服装','洗护','婴童','杂货','饮食','其它'];
-        this.baseUrl='http://127.0.0.1/yanxuan/pages/index/';
+        this.baseUrl='https://127.0.0.1/yanxuan/pages/index/';
     }
     getJsonData(callback){
         var param={
