@@ -1,4 +1,6 @@
-secure.js
-.idea/
-.vscode/
-.typings/
+/*.sh
+/.idea
+/.svn
+/Runtime
+/Uploads
+.DS_Store

@@ -25,6 +25,7 @@ App({
     }
   },
   globalData:{
-    userInfo:null
+    userInfo:null,
+    baseRestUrl:'http://127.0.0.1/yanxuan_file/'  //pc编辑器开发时使用地址。 放在data 文件中，大家取出来放到自己的服务上。记住把 不校验请求域名勾上!
   }
 })
